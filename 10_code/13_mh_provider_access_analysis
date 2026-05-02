@@ -1,0 +1,67 @@
+import pandas as pd
+import numpy as np
+import matplotlib.pyplot as plt
+import geopandas as gpd
+
+pd.set_option("mode.copy_on_write", True)
+
+mental_health_df = pd.read_csv("20_intermediate_files/clean_mh_dataset.csv")
+
+nc_counties = pygris.counties(state="NC", cb=True, year=2023)
+
+nc_counties["GEOID"] = nc_counties["GEOID"].astype("int64")
+
+mental_health_gdf = nc_counties.merge(
+    mental_health_df, left_on="GEOID", right_on="fips", how="inner"
+)
+
+threshold = mental_health_gdf["providers_per_100k"].median()  # could be changed later
+
+high_access = mental_health_gdf[mental_health_df["providers_per_100k"] >= threshold]
+
+low_access = mental_health_gdf[mental_health_df["providers_per_100k"] < threshold]
+
+
+# figure 1: distribution of high and low access with observed distress
+fig1, (ax11, ax12) = plt.subplots(1, 2)
+
+high_access["observed_distress"].hist(ax=ax11)
+ax11.set_title("High Access")
+low_access["observed_distress"].hist(ax=ax12)
+ax12.set_title("Low Access")
+
+plt.tight_layout()
+plt.show()
+
+"""
+mental_health_df.groupby(mental_health_df["providers_per_100k"] >= threshold)[
+    ["observed_distress", "loneliness_rate", "unemployment_rate"]
+].mean()
+"""
+
+fig2, (ax21, ax22) = plt.subplots(1, 2)
+
+mental_health_gdf.plot(column="providers_per_100k", legend=True)
+ax21.set_title("Mental Health Care Providers per 100k people in NC Counties")
+mental_health_gdf.plot(column="observed_distress", legend=True)
+ax21.set_title("Frequent Mental Health Distress in NC Counties")
+
+plt.tight_layout()
+plt.show()
+
+# create column for high access
+mental_health_gdf["high_access"] = mental_health_df["providers_per_100k"] >= threshold
+
+mental_health_gdf["low_access"] = mental_health_df["providers_per_100k"] < threshold
+
+# figure 3: low access counties
+fig3, ax31 = plt.subplots()
+
+mental_health_gdf.plot(column="low_access", legend=True, ax=ax31)
+ax31.set_title("Low Mental Health Provider Access Counties in NC")
+
+# figure 4: rucc categories for low access counties
+fig3=4, ax41 = plt.subplots()
+low_access.plot(column="rucc_category", legend=True, ax=ax41)
+ax31.set_title("RUCC Categories for Low Mental Health Provider Access Counties in NC")
+

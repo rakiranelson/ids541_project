@@ -4,6 +4,8 @@ import pandas as pd
 import numpy as np
 import sklearn
 
+pd.set_option("mode.copy_on_write", True)
+
 mental_health_df = pd.read_csv("20_intermediate_files/mental_health_dataset.csv")
 
 # drop gates county because it's missing data for mental health provider access
