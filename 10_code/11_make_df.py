@@ -105,6 +105,6 @@ nc_analysis_df = nc_places_data.merge(nc_chr_data, on="fips", how="inner")
 nc_analysis_df = nc_analysis_df.merge(nc_rucc_data, on="fips", how="inner")
 
 
-nc_analysis_df.reset_index().to_csv(
+nc_analysis_df.reset_index(drop=True).to_csv(
     "20_intermediate_files/mental_health_dataset.csv", index=False
 )
