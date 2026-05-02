@@ -102,3 +102,4 @@ plt.show()
 import joblib
 
 joblib.dump(full_lm, "20_intermediate_files/distress_model.pkl")
+joblib.dump(predictors, "20_intermediate_files/model_features.pkl")
