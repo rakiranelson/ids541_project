@@ -1,4 +1,4 @@
-state,county,fips,adult_pop,observed_distress,loneliness_rate,access_to_exercise,social_associations,air_pollution,uninsured,unemployment_rate,providers_per_100k,log_median_hh_income,rucc_category
+state,county,fips,adult_pop,observed_distress,loneliness_rate,access_to_exercise,social_associations_per_10k,air_pollution,uninsured,unemployment_rate,providers_per_100k,log_median_hh_income,rucc_category
 NC,Bertie,37015,"14,112",17.5,35.3,35.6306457,24.583155195,7.0,13.596302669999998,5.9003193099999995,57.12654,10.628133400155445,rural
 NC,Vance,37181,"32,113",18.1,35.3,66.17736859,14.53553379,8.1,18.0171051,7.910786890000001,239.42159999999998,10.726719568158678,mid
 NC,New Hanover,37129,"197,058",16.3,32.1,95.08909978999999,9.2556199364,3.8,14.96761258,4.23522317,528.34275,11.100616994380056,metro

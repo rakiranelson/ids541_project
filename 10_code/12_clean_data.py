@@ -20,7 +20,9 @@ prop_to_perc = ["uninsured", "unemployment_rate", "access_to_exercise"]
 
 mental_health_df[prop_to_perc] = mental_health_df[prop_to_perc] * 100
 
-mental_health_df.rename(columns={"social_associations": "social_associations_per_10k"})
+mental_health_df = mental_health_df.rename(
+    columns={"social_associations": "social_associations_per_10k"}
+)
 
 
 # categorize rucc codes
