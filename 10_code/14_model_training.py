@@ -19,6 +19,14 @@ high_access = mental_health_df[mental_health_df["providers_per_100k"] >= thresho
 
 low_access = mental_health_df[mental_health_df["providers_per_100k"] < threshold]
 
+high_access.reset_index(drop=True).to_csv(
+    "20_intermediate_files/high_access.csv", index=False
+)
+
+low_access.reset_index(drop=True).to_csv(
+    "20_intermediate_files/low_access.csv", index=False
+)
+
 
 predictors = [
     "unemployment_rate",
