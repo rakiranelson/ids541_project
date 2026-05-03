@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 24.1) (preloaded format=pdflatex 2026.5.2)  3 MAY 2026 11:21
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 24.1) (preloaded format=pdflatex 2026.5.2)  3 MAY 2026 11:56
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -318,6 +318,23 @@ Overfull \hbox (11.31555pt too wide) in paragraph at lines 128--129
  []
 
 [6 <./30_results/figures/fig5_top_counties_gap.png>] [7]
+<30_results/figures/figA4_model_residuals.png, id=39, 426.8748pt x 326.9013pt>
+File: 30_results/figures/figA4_model_residuals.png Graphic file (type png)
+<use 30_results/figures/figA4_model_residuals.png>
+Package pdftex.def Info: 30_results/figures/figA4_model_residuals.png  used on 
+input line 141.
+(pdftex.def)             Requested size: 352.31625pt x 269.8216pt.
+<30_results/figures/figA3_gap_by_rucc_scatter.png, id=40, 417.7206pt x 326.9013
+pt>
+File: 30_results/figures/figA3_gap_by_rucc_scatter.png Graphic file (type png)
+<use 30_results/figures/figA3_gap_by_rucc_scatter.png>
+Package pdftex.def Info: 30_results/figures/figA3_gap_by_rucc_scatter.png  used
+ on input line 151.
+(pdftex.def)             Requested size: 352.31625pt x 275.71255pt.
+ [8
+
+ <./30_results/figures/figA4_model_residuals.png>] [9 <./30_results/figures/fig
+A3_gap_by_rucc_scatter.png>]
 (C:\Users\rakir\computer science\Courses\IDS 541\ids541_project\40_docs\final_m
 emo.aux)
  ***********
@@ -326,11 +343,11 @@ L3 programming layer <2024-01-04>
  ***********
  ) 
 Here is how much of TeX's memory you used:
- 4193 strings out of 474486
- 72782 string characters out of 5743756
+ 4209 strings out of 474486
+ 73551 string characters out of 5743756
  1931542 words of memory out of 5000000
- 26466 multiletter control sequences out of 15000+600000
- 562395 words of font info for 51 fonts, out of 8000000 for 9000
+ 26482 multiletter control sequences out of 15000+600000
+ 563000 words of font info for 53 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  67i,8n,77p,821b,492s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <C:/Users/rakir/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/
@@ -339,9 +356,9 @@ fonts/cm/cmbx12.pfb><C:/Users/rakir/AppData/Local/Programs/MiKTeX/fonts/type1/p
 ublic/amsfonts/cm/cmr10.pfb><C:/Users/rakir/AppData/Local/Programs/MiKTeX/fonts
 /type1/public/amsfonts/cm/cmsy10.pfb>
 Output written on "C:\Users\rakir\computer science\Courses\IDS 541\ids541_proje
-ct\40_docs\final_memo.pdf" (7 pages, 807372 bytes).
+ct\40_docs\final_memo.pdf" (9 pages, 941527 bytes).
 PDF statistics:
- 57 PDF objects out of 1000 (max. 8388607)
+ 67 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 26 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 36 words of extra memory for PDF output out of 10000 (max. 10000000)
 

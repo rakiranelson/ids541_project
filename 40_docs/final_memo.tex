@@ -50,7 +50,7 @@ However, these measures may not reflect underlying mental health burden equally 
 \begin{figure}[H]
 \centering
 \includegraphics[width=0.9\linewidth]{30_results/figures/fig1_provider_access_map.png}
-\caption{Mental health providers per 100,000 residents (left) and observed distress (right).}
+\caption{Mental health providers per 100,000 residents (left) and observed mental health distress (right) across North Carolina counties.}
 \end{figure}
 
 \textbf{Figure 1} illustrates this mismatch by comparing provider access and observed distress across counties. While some low-access counties exhibit relatively low levels of observed distress, others show higher distress despite similar levels of access, indicating that observed measures do not consistently align with access-based expectations. This inconsistency motivates the need for a more systematic approach to identifying counties where need may be less visible in the data. 
@@ -70,7 +70,7 @@ A linear regression model was then used to estimate expected levels of mental he
 \begin{figure}[H]
 \centering
 \includegraphics[width=0.7\linewidth]{30_results/figures/fig2_model_validation_high_access.png}
-\caption{Observed vs predicted distress in high-access counties.}
+\caption{Observed versus predicted mental health distress in high-access counties. Points are closely aligned along the 45-degree line, indicating that the model provides a reasonable fit and can approximate observed distress based on county-level characteristics.}
 \end{figure}
 
 In the analysis, this trained model was applied to low-access counties to generate predicted (expected) levels of distress. The difference between observed and predicted distress is defined as the prediction gap: 
@@ -100,7 +100,7 @@ Figure 3 presents the spatial distribution of prediction gaps across low-access 
     \caption{Prediction gap vs expected distress}
 \end{subfigure}
 
-\caption{Prediction gaps across low-access counties}
+\caption{Prediction gaps across low-access counties. Panel (a) shows the spatial distribution of the gap, while Panel (b) shows the relationship between expected distress and the prediction gap.}
 \end{figure}
 
 \textbf{Figure 3(a)} shows how prediction gaps vary across low-access counties. The distribution includes both positive and negative values, indicating that observed distress is sometimes higher and sometimes lower than expected. This suggests that observed measures do not consistently overstate or understate underlying need across these counties. However, several counties exhibit notably negative prediction gaps, indicating that observed distress is lower than expected in those locations. These counties represent cases where underlying need may be less visible in the data. 
@@ -118,7 +118,7 @@ While most counties are appropriately characterized by observed distress, a subs
 \begin{figure}[H]
 \centering
 \includegraphics[width=0.8\linewidth]{30_results/figures/fig5_top_counties_gap.png}
-\caption{Counties with largest positive and negative prediction gaps.}
+\caption{Counties with the largest positive and negative prediction gaps. Counties with large negative gaps represent locations where observed distress is substantially lower than expected, while counties with gaps indicate areas where observed distress exceeds model-based expectations.}
 \end{figure}
 
 As shown in \textbf{Figure 4}, Cherokee, Brunswick, Clay, Graham, and Ashe counties exhibit the largest negative prediction gaps and should be prioritized for targeted intervention. Notably, 4 of these 5 counties are classified as rural. In contrast, among the 5 counties with the largest positive prediction gaps, only 2 are rural, with the remainder split between metro and mid-sized counties. This pattern suggests that under-identified mental health needs may be more concentrated in rural, low-access areas. 
@@ -127,5 +127,33 @@ Rather than implementing broad statewide changes, NC DHHS should focus on target
 
 Overall, this analysis shows that differences between observed and expected distress are not widespread across all low-access counties, but instead concentrated in a small number of locations. By identifying these counties, policymakers can move beyond broad assumptions about access and direct resources toward areas where need is most likely to be under-identified, improving both the efficiency and effectiveness of mental health policy. 
 
+\clearpage
+
+\renewcommand{\thefigure}{A\arabic{figure}}
+\setcounter{figure}{0}
+
+\section*{Appendix}
+
+\subsection*{Figure A1: Model Residual Diagnostics}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.75\linewidth]{30_results/figures/figA4_model_residuals.png}
+\caption{Residuals from the regression model trained on high-access counties using a 80-20 training/test split.}
+\end{figure}
+
+This figure provides additional validation of the modeling approach used in the analysis. The residuals are centered around zero with no clear systematic pattern, suggesting that the model provides a reasonable fit to the data and does not exhibit strong bias across the range of predicted values. This suggests that linear specification is appropriate for capturing the relationship between county characteristics and observed distress in high-access counties.
+
+\subsection*{Figure A2: Prediction Gap by Rural-Urban Classification (RUCC)}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.75\linewidth]{30_results/figures/figA3_gap_by_rucc_scatter.png}
+\caption{Prediction gap of low-access counties plotted against expected distress, with counties colored by Rural-Urban Classification (RUCC).}
+\end{figure}
+
+This figure provides additional context on how prediction gaps vary across counties by rural-urban classification. While prediction gaps appear across all county types, the most negative gaps are more concentrated among rural counties. In contrast, counties with positive prediction gaps are more evenly distributed across metro, mid-sized, and rural categories. 
+
+This pattern suggests that cases where observed distress falls below expected levels are more likely to occur in rural, low-access areas. As a result, rural counties are disproportionately represented among those where underlying need may be less visible in the data, supporting the focus on targeted intervention in these areas.
 
 \end{document}
