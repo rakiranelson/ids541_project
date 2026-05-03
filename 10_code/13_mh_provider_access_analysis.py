@@ -38,6 +38,7 @@ ax12.set_title("Low Access")
 plt.tight_layout()
 plt.show()
 
+
 """
 mental_health_df.groupby(mental_health_df["providers_per_100k"] >= threshold)[
     ["observed_distress", "loneliness_rate", "unemployment_rate"]
