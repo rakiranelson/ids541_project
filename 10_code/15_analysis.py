@@ -164,5 +164,5 @@ results["gap_by_rucc"] = (
 
 import json
 
-with open("20_intermediate_files/analysis_results.json", "w") as f:
+with open("30_results/analysis_results.json", "w") as f:
     json.dump(results, f, indent=4)
