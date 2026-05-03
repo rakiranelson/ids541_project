@@ -77,11 +77,10 @@ plt.tight_layout()
 plt.show()
 
 # export high and low access data
-
-high_access.reset_index(drop=True).to_csv(
-    "20_intermediate_files/high_access_gdf.csv", index=False
+low_access.reset_index(drop=True).to_file(
+    "20_intermediate_files/high_access_gdf.geojson", driver="GeoJSON"
 )
 
-low_access.reset_index(drop=True).to_csv(
-    "20_intermediate_files/low_access_gdf.csv", index=False
+low_access.reset_index(drop=True).to_file(
+    "20_intermediate_files/low_access_gdf.geojson", driver="GeoJSON"
 )
