@@ -1,0 +1,29 @@
+{
+    "neg_rucc_counts": {
+        "rural": 4,
+        "metro": 1
+    },
+    "pos_rucc_counts": {
+        "rural": 2,
+        "metro": 2,
+        "mid": 1
+    },
+    "neg_means": {
+        "unemployment_rate": 5.345382388,
+        "uninsured": 17.565238205999997,
+        "log_median_hh_income": 10.814793867624418,
+        "access_to_exercise": 86.79502538999999
+    },
+    "pos_means": {
+        "unemployment_rate": 5.231788722,
+        "uninsured": 14.780867820000001,
+        "log_median_hh_income": 10.984063087692684,
+        "access_to_exercise": 52.803510994
+    },
+    "gap_mean": -0.07327187604276966,
+    "gap_by_rucc": {
+        "metro": 0.07657352549146726,
+        "mid": 0.18887367835708435,
+        "rural": -0.33546776941366
+    }
+}
