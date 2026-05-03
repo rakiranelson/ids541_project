@@ -44,7 +44,7 @@ ax1.plot([min_val, max_val], [min_val, max_val])
 ax1.set(
     xlabel="Predicted Distress",
     ylabel="Observed Distress",
-    title="Observed vs Predicted (Low-Access Counties)",
+    title="Observed versus Predicted Mental Health Distress (Low-Access Counties)",
 )
 
 fig1.savefig(
@@ -69,7 +69,7 @@ ax2.axhline(0, linestyle="--", color="gray")
 ax2.set(
     xlabel="Predicted Distress",
     ylabel="Observed − Predicted",
-    title="Prediction Gap vs Expected Distress)",
+    title="Prediction Gap versus Expected Mental Health Distress",
 )
 
 fig2.savefig(
@@ -85,7 +85,7 @@ ax3.axvline(0)
 ax3.set(
     xlabel="Observed − Predicted",
     ylabel="Count",
-    title="Distribution of Prediction Gap",
+    title="Distribution of Prediction Gap (Low-Access Counties)",
 )
 
 fig3.savefig(
@@ -107,7 +107,7 @@ ax4.axhline(0)
 ax4.set(
     xlabel="Predicted Distress",
     ylabel="Observed − Predicted",
-    title="Prediction Gap by RUCC Category",
+    title="Prediction Gap by Rural-Urban Classification (RUCC)",
 )
 
 import matplotlib.patches as mpatches
@@ -151,7 +151,7 @@ ax5.set_axis_off()
 ax5.spines["bottom"].set_linewidth(0.5)
 ax5.spines["bottom"].set_linewidth(0.5)
 
-ax5.set_title("Prediction Gap by County")
+ax5.set_title("Prediction Gap across Low-Access Counties")
 
 fig5.savefig(
     "30_results/figures/fig3_prediction_gap_map.png",
@@ -201,7 +201,7 @@ ax6.axvline(0, linestyle="--", color="black")
 
 ax6.set(
     xlabel="Prediction Gap (Observed − Predicted)",
-    title="Counties with Largest Prediction Gaps",
+    title="Counties with Largest Positive and Negative Prediction Gaps",
 )
 
 fig6.savefig(

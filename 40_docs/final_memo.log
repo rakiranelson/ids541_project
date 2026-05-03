@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 24.1) (preloaded format=pdflatex 2026.5.2)  3 MAY 2026 11:56
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 24.1) (preloaded format=pdflatex 2026.5.2)  3 MAY 2026 12:10
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -279,14 +279,14 @@ on input line 52.
 (pdftex.def)             Requested size: 422.77664pt x 113.54794pt.
 
 [2] [3 <./30_results/figures/fig1_provider_access_map.png>]
-<30_results/figures/fig2_model_validation_high_access.png, id=17, 406.1574pt x 
+<30_results/figures/fig2_model_validation_high_access.png, id=17, 476.2593pt x 
 326.9013pt>
 File: 30_results/figures/fig2_model_validation_high_access.png Graphic file (ty
 pe png)
 <use 30_results/figures/fig2_model_validation_high_access.png>
 Package pdftex.def Info: 30_results/figures/fig2_model_validation_high_access.p
 ng  used on input line 72.
-(pdftex.def)             Requested size: 328.82707pt x 264.6589pt.
+(pdftex.def)             Requested size: 328.82707pt x 225.70679pt.
 <30_results/figures/fig3_prediction_gap_map.png, id=18, 357.4956pt x 228.1323pt
 >
 File: 30_results/figures/fig3_prediction_gap_map.png Graphic file (type png)
@@ -356,7 +356,7 @@ fonts/cm/cmbx12.pfb><C:/Users/rakir/AppData/Local/Programs/MiKTeX/fonts/type1/p
 ublic/amsfonts/cm/cmr10.pfb><C:/Users/rakir/AppData/Local/Programs/MiKTeX/fonts
 /type1/public/amsfonts/cm/cmsy10.pfb>
 Output written on "C:\Users\rakir\computer science\Courses\IDS 541\ids541_proje
-ct\40_docs\final_memo.pdf" (9 pages, 941527 bytes).
+ct\40_docs\final_memo.pdf" (9 pages, 980488 bytes).
 PDF statistics:
  67 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)

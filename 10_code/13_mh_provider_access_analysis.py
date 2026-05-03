@@ -77,7 +77,7 @@ mental_health_gdf.plot(
     ax=ax21,
     cmap="Greens",
 )
-ax21.set_title("Mental Health Care Providers per 100k people")
+ax21.set_title("Mental Health Providers per 100,000 Residents")
 ax21.set_axis_off()
 
 mental_health_gdf.plot(
@@ -89,7 +89,7 @@ mental_health_gdf.plot(
     ax=ax22,
     cmap="Reds",
 )
-ax22.set_title("Observed Mental Distress")
+ax22.set_title("Observed Mental Health Distress")
 ax22.set_axis_off()
 
 fig2.savefig(
@@ -108,7 +108,7 @@ mental_health_gdf["low_access"] = mental_health_gdf["providers_per_100k"] < thre
 fig3, ax31 = plt.subplots()
 
 mental_health_gdf.plot(column="low_access", legend=True, ax=ax31)
-ax31.set_title("Low Mental Health Provider Access Counties in NC")
+ax31.set_title("Low Mental Health Provider Access Counties in North CarolinaC")
 
 fig3.savefig(
     "30_results/figures/figA8_low_access_binary_map.png",
@@ -121,7 +121,7 @@ plt.close(fig3)
 # figure 4: rucc categories for low access counties
 fig4, ax41 = plt.subplots()
 low_access.plot(column="rucc_category", legend=True, ax=ax41)
-ax41.set_title("RUCC Categories for Low Mental Health Provider Access Counties in NC")
+ax41.set_title("Rural-Urban Classification for Low-Access Counties")
 
 fig4.savefig(
     "30_results/figures/figA6_rucc_map.png",

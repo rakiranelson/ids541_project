@@ -77,7 +77,11 @@ residuals = y_test - y_pred
 fig1, ax1 = plt.subplots()
 ax1.scatter(y_pred, residuals)
 ax1.axhline(0)
-ax1.set(xlabel="Predicted", ylabel="Residuals", title="Residual Plot")
+ax1.set(
+    xlabel="Predicted",
+    ylabel="Residuals",
+    title="Model Residuals (High-Access Counties)",
+)
 
 fig1.savefig(
     "30_results/figures/figA4_model_residuals.png", dpi=300, bbox_inches="tight"
@@ -87,7 +91,11 @@ plt.close(fig1)
 fig2, ax2 = plt.subplots()
 ax2.scatter(y_test, y_pred)
 ax2.plot([y_test.min(), y_test.max()], [y_test.min(), y_test.max()])
-ax2.set(xlabel="Actual", ylabel="Predicted", title="Actual vs Predicted")
+ax2.set(
+    xlabel="Actual",
+    ylabel="Predicted",
+    title="Observed versus Predicted Mental Health Distress (Test Sample)",
+)
 
 fig2.savefig(
     "30_results/figures/figA5_model_test_fit.png", dpi=300, bbox_inches="tight"
@@ -128,7 +136,7 @@ ax3.plot([min_val, max_val], [min_val, max_val], color="gray", linestyle="--")
 ax3.set(
     xlabel="Actual Distress",
     ylabel="Predicted Distress",
-    title="Actual vs Predicted (using all data)",
+    title="Observed versus Predicted Mental Health Distress (Full High-Access Sample)",
 )
 
 fig3.savefig(
