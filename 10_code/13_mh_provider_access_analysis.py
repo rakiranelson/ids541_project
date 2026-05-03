@@ -75,6 +75,7 @@ mental_health_gdf.plot(
     linewidth=0.2,
     edgecolor="black",
     ax=ax21,
+    cmap="Greens",
 )
 ax21.set_title("Mental Health Care Providers per 100k people")
 ax21.set_axis_off()
@@ -86,6 +87,7 @@ mental_health_gdf.plot(
     linewidth=0.2,
     edgecolor="black",
     ax=ax22,
+    cmap="Reds",
 )
 ax22.set_title("Observed Mental Distress")
 ax22.set_axis_off()

@@ -1,10 +1,12 @@
 
 \documentclass[11pt]{article}
+\usepackage[utf8]{inputenc}
 \usepackage[margin=1in]{geometry}
 \usepackage{setspace}
 \usepackage{graphicx}
 \usepackage{amsmath}
 \usepackage{float}
+\usepackage{subcaption}
 
 \setstretch{1.15}
 \setlength{\parindent}{0pt}
@@ -29,7 +31,7 @@ Mental health policy frequently prioritizes areas with limited provider access u
 
 This analysis evaluates whether counties with lower provider access exhibit observed distress levels that are lower than expected given their socioeconomic and environmental characteristics. A predictive model trained on high-access counties is used to estimate expected distress.
 
-Across low-access counties, the average prediction gap is approximately \textbf{-0.07}, suggesting that observed distress generally aligns with expectations. However, this average masks important variation. A small number of counties—Cherokee, Brunswick, Clay, Graham, and Ashe—exhibit substantially negative prediction gaps, indicating that observed distress may underrepresent true need.
+Across low-access counties, the average prediction gap is approximately \textbf{-0.07}, suggesting that observed distress generally aligns with expectations. However, this average masks important variation. A small number of counties -- Cherokee, Brunswick, Clay, Graham, and Ashe -- exhibit substantially negative prediction gaps, indicating that observed distress may underrepresent true need.
 
 These findings suggest that current allocation strategies are broadly effective but may overlook specific counties where need is less visible. Targeted adjustments, rather than broad policy changes, are therefore warranted.
 
@@ -75,23 +77,27 @@ The model is then applied to low-access counties. The prediction gap is defined 
 
 \section*{1.6 Results}
 
-Figure 3 presents the spatial distribution of prediction gaps across low-access counties.
+Figure 3 presents the spatial distribution of prediction gaps across low-access counties and the relationship between expected distress and the prediction gap.
 
 \begin{figure}[H]
 \centering
-\includegraphics[width=0.9\linewidth]{30_results/figures/fig3_prediction_gap_map.png}
-\caption{Prediction gap across counties.}
+
+\begin{subfigure}{0.57\linewidth}
+    \centering
+    \includegraphics[width=\linewidth]{30_results/figures/fig3_prediction_gap_map.png}
+    \caption{Prediction gap across counties}
+\end{subfigure}
+\hfill
+\begin{subfigure}{0.42\linewidth}
+    \centering
+    \includegraphics[width=\linewidth]{30_results/figures/fig4_prediction_gap_scatter.png}
+    \caption{Prediction gap vs expected distress}
+\end{subfigure}
+
+\caption{Prediction gaps across low-access counties}
 \end{figure}
 
 Most counties exhibit values near zero, indicating alignment between observed and expected distress. However, several counties show large negative gaps, suggesting potential underidentification of need.
-
-Figure 4 evaluates whether this discrepancy reflects a systematic issue.
-
-\begin{figure}[H]
-\centering
-\includegraphics[width=0.7\linewidth]{30_results/figures/fig4_prediction_gap_scatter.png}
-\caption{Prediction gap vs expected distress.}
-\end{figure}
 
 The absence of a clear trend indicates that discrepancies are not consistent across counties. This suggests that current methods of identifying need are not fundamentally flawed. Instead, the issue appears localized to specific counties rather than widespread across all low-access areas.
 
@@ -105,7 +111,7 @@ While most counties are appropriately characterized by observed distress, a subs
 \caption{Counties with largest positive and negative prediction gaps.}
 \end{figure}
 
-As shown in Figure 5, Cherokee, Brunswick, Clay, Graham, and Ashe counties exhibit the largest negative prediction gaps. These counties should be prioritized for targeted intervention.
+As shown in Figure 4, Cherokee, Brunswick, Clay, Graham, and Ashe counties exhibit the largest negative prediction gaps. These counties should be prioritized for targeted intervention.
 
 Among these counties, 4 are rural. They also exhibit higher unemployment (5.35\%) and higher uninsured rates (17.57\%), suggesting that structural barriers contribute both to underlying distress and to its underidentification.
 
