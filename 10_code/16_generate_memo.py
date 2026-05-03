@@ -29,11 +29,11 @@ Ra'Kira Nelson \\\\
 \\today
 \\end{{center}}
 
-\\section*{{0.1 Stakeholders}}
+\\section*{{1.1 Stakeholders}}
 
 This memo is written for policymakers and analysts at the North Carolina Department of Health and Human Services (NC DHHS). These stakeholders are responsible for allocating mental health resources, identifying underserved populations, and designing targeted interventions across counties. Because resource allocation decisions rely heavily on county-level indicators, the accuracy of these measures directly determines how effectively mental health needs are identified and addressed.
 
-\\section*{{0.2 Executive Summary}}
+\\section*{{1.2 Executive Summary}}
 
 Mental health policy frequently prioritizes areas with limited provider access under the assumption that these areas exhibit higher unmet need. However, these decisions are typically based on observed measures of distress, which may not fully reflect underlying conditions in environments where access to care is constrained.
 
@@ -43,7 +43,7 @@ Across low-access counties, the average prediction gap is approximately \\textbf
 
 These findings suggest that current allocation strategies are broadly effective but may overlook specific counties where need is less visible. Targeted adjustments, rather than broad policy changes, are therefore warranted.
 
-\\section*{{0.3 Decisions To Be Made}}
+\\section*{{1.3 Decisions To Be Made}}
 
 NC DHHS must determine whether its current approach to identifying high-need areas adequately captures variation in mental health burden across counties.
 
@@ -51,7 +51,7 @@ First, the agency must decide whether model-based estimates of expected distress
 
 Second, policymakers must determine whether targeted interventions should be directed toward counties identified as having large negative prediction gaps, rather than applying uniform policy adjustments across all low-access areas.
 
-\\section*{{0.4 Background and Motivation}}
+\\section*{{1.4 Background and Motivation}}
 
 Mental health policy in the United States has increasingly focused on addressing provider shortages through programs such as Mental Health Professional Shortage Area (MHPSA) designations. These programs aim to direct funding and workforce incentives toward regions with insufficient provider availability.
 
@@ -65,7 +65,7 @@ While these initiatives have improved access, they rely heavily on observable in
 
 The mismatch between provider access and observed distress motivates this analysis.
 
-\\section*{{0.5 Methodology}}
+\\section*{{1.5 Methodology}}
 
 A linear regression model is used to estimate expected distress based on county-level characteristics including unemployment, insurance coverage, income, and environmental conditions.
 
@@ -83,7 +83,7 @@ The model is then applied to low-access counties. The prediction gap is defined 
 \\text{{Prediction Gap}} = \\text{{Observed}} - \\text{{Predicted}}
 \\]
 
-\\section*{{0.6 Results}}
+\\section*{{1.6 Results}}
 
 Figure 3 presents the spatial distribution of prediction gaps across low-access counties.
 
@@ -105,7 +105,7 @@ Figure 4 evaluates whether this discrepancy reflects a systematic issue.
 
 The absence of a clear trend indicates that discrepancies are not consistent across counties. This suggests that current methods of identifying need are not fundamentally flawed. Instead, the issue appears localized to specific counties rather than widespread across all low-access areas.
 
-\\section*{{0.7 Implications for Policy}}
+\\section*{{1.7 Implications for Policy}}
 
 While most counties are appropriately characterized by observed distress, a subset deviates substantially. These counties represent the most important cases for policy intervention.
 
@@ -123,7 +123,7 @@ Rather than implementing broad statewide changes, NC DHHS should focus on target
 
 Incorporating model-based indicators into decision-making would allow policymakers to identify these counties more systematically and allocate resources more effectively.
 
-\\section*{{0.8 Conclusion}}
+\\section*{{1.8 Conclusion}}
 
 This analysis demonstrates that underestimation of mental health need is not widespread across all low-access counties, but instead concentrated in a small number of locations.
 

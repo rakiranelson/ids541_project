@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 24.1) (preloaded format=pdflatex 2026.5.2)  3 MAY 2026 00:41
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 24.1) (preloaded format=pdflatex 2026.5.2)  3 MAY 2026 01:26
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -258,15 +258,14 @@ l.32 ...erokee, Brunswick, Clay, Graham, and Ashe—
 [1
 
 {C:/Users/rakir/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}]
-<30_results/figures/fig1_provider_access_map.png, id=8, 459.3963pt x 281.3712pt
+<30_results/figures/fig1_provider_access_map.png, id=8, 875.4306pt x 235.1184pt
 >
 File: 30_results/figures/fig1_provider_access_map.png Graphic file (type png)
 <use 30_results/figures/fig1_provider_access_map.png>
 Package pdftex.def Info: 30_results/figures/fig1_provider_access_map.png  used 
 on input line 52.
-(pdftex.def)             Requested size: 422.77664pt x 258.95052pt.
- [2 <./30_results/figures/fig1_provider_access_map.png>]
-<30_results/figures/fig2_model_validation_high_access.png, id=14, 406.1574pt x 
+(pdftex.def)             Requested size: 422.77664pt x 113.54794pt.
+<30_results/figures/fig2_model_validation_high_access.png, id=10, 406.1574pt x 
 326.9013pt>
 File: 30_results/figures/fig2_model_validation_high_access.png Graphic file (ty
 pe png)
@@ -274,13 +273,14 @@ pe png)
 Package pdftex.def Info: 30_results/figures/fig2_model_validation_high_access.p
 ng  used on input line 66.
 (pdftex.def)             Requested size: 328.82707pt x 264.6589pt.
-<30_results/figures/fig3_prediction_gap_map.png, id=15, 386.6445pt x 281.3712pt
+ [2 <./30_results/figures/fig1_provider_access_map.png>]
+<30_results/figures/fig3_prediction_gap_map.png, id=15, 357.4956pt x 228.1323pt
 >
 File: 30_results/figures/fig3_prediction_gap_map.png Graphic file (type png)
 <use 30_results/figures/fig3_prediction_gap_map.png>
 Package pdftex.def Info: 30_results/figures/fig3_prediction_gap_map.png  used o
 n input line 82.
-(pdftex.def)             Requested size: 422.77664pt x 307.67601pt.
+(pdftex.def)             Requested size: 422.77664pt x 269.8099pt.
  [3 <./30_results/figures/fig2_model_validation_high_access.png>]
 <30_results/figures/fig4_prediction_gap_scatter.png, id=21, 417.7206pt x 326.90
 13pt>
@@ -320,7 +320,7 @@ fonts/cm/cmbx12.pfb><C:/Users/rakir/AppData/Local/Programs/MiKTeX/fonts/type1/p
 ublic/amsfonts/cm/cmr10.pfb><C:/Users/rakir/AppData/Local/Programs/MiKTeX/fonts
 /type1/public/amsfonts/cm/cmsy10.pfb>
 Output written on "C:\Users\rakir\computer science\Courses\IDS 541\ids541_proje
-ct\40_docs\final_memo.pdf" (6 pages, 520771 bytes).
+ct\40_docs\final_memo.pdf" (6 pages, 783774 bytes).
 PDF statistics:
  52 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)

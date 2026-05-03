@@ -14,6 +14,18 @@ import warnings
 
 warnings.filterwarnings("ignore")
 
+plt.rcParams.update(
+    {
+        "axes.spines.top": False,
+        "axes.spines.right": False,
+        "axes.edgecolor": "black",
+        "axes.linewidth": 1,
+        "xtick.color": "black",
+        "ytick.color": "black",
+    }
+)
+
+
 mental_health_df = pd.read_csv("20_intermediate_files/clean_mh_dataset.csv")
 
 nc_counties = pygris.counties(state="NC", cb=True, year=2023)
@@ -53,12 +65,30 @@ mental_health_df.groupby(mental_health_df["providers_per_100k"] >= threshold)[
 ].mean()
 """
 
-fig2, (ax21, ax22) = plt.subplots(1, 2)
+# updated to make clear
+fig2, (ax21, ax22) = plt.subplots(1, 2, figsize=(12, 4), constrained_layout=True)
 
-mental_health_gdf.plot(column="providers_per_100k", legend=True, ax=ax21)
-ax21.set_title("Mental Health Care Providers per 100k people in NC Counties")
-mental_health_gdf.plot(column="observed_distress", legend=True, ax=ax22)
-ax21.set_title("Frequent Mental Health Distress in NC Counties")
+mental_health_gdf.plot(
+    column="providers_per_100k",
+    legend=True,
+    legend_kwds={"orientation": "horizontal", "shrink": 0.6},
+    linewidth=0.2,
+    edgecolor="black",
+    ax=ax21,
+)
+ax21.set_title("Mental Health Care Providers per 100k people")
+ax21.set_axis_off()
+
+mental_health_gdf.plot(
+    column="observed_distress",
+    legend=True,
+    legend_kwds={"orientation": "horizontal", "shrink": 0.6},
+    linewidth=0.2,
+    edgecolor="black",
+    ax=ax22,
+)
+ax22.set_title("Observed Mental Distress")
+ax22.set_axis_off()
 
 fig2.savefig(
     "30_results/figures/fig1_provider_access_map.png",

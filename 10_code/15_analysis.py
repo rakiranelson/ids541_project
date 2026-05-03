@@ -7,6 +7,17 @@ import os
 
 os.makedirs("30_results/figures", exist_ok=True)
 
+plt.rcParams.update(
+    {
+        "axes.spines.top": False,
+        "axes.spines.right": False,
+        "axes.edgecolor": "black",
+        "axes.linewidth": 1,
+        "xtick.color": "black",
+        "ytick.color": "black",
+    }
+)
+
 import joblib
 
 model = joblib.load("20_intermediate_files/distress_model.pkl")
@@ -51,8 +62,10 @@ low_access["prediction_gap"] = (
 ## figure 2
 fig2, ax2 = plt.subplots()
 
-ax2.scatter(low_access["predicted_distress"], low_access["prediction_gap"])
-ax2.axhline(0)
+ax2.scatter(
+    low_access["predicted_distress"], low_access["prediction_gap"], color="darkviolet"
+)
+ax2.axhline(0, linestyle="--", color="gray")
 ax2.set(
     xlabel="Predicted Distress",
     ylabel="Observed − Predicted",
@@ -125,9 +138,20 @@ low_access_gdf = low_access_gdf.merge(
 ## figure 5
 fig5, ax5 = plt.subplots()
 
-low_access_gdf.plot(column="prediction_gap", cmap="coolwarm_r", legend=True, ax=ax5)
+low_access_gdf.plot(
+    column="prediction_gap",
+    cmap="coolwarm_r",
+    legend=True,
+    legend_kwds={"shrink": 0.8, "aspect": 30},
+    linewidth=0.2,
+    edgecolor="black",
+    ax=ax5,
+)
+ax5.set_axis_off()
+ax5.spines["bottom"].set_linewidth(0.5)
+ax5.spines["bottom"].set_linewidth(0.5)
 
-ax5.set_title("Prediction Gap by County (Red = Lower Than Expected")
+ax5.set_title("Prediction Gap by County")
 
 fig5.savefig(
     "30_results/figures/fig3_prediction_gap_map.png",
@@ -166,11 +190,15 @@ top_combined = pd.concat(
     ]
 )
 
+top_combined = top_combined.sort_values("prediction_gap")
+colors = ["red" if x < 0 else "blue" for x in top_combined["prediction_gap"]]
+
 fig6, ax6 = plt.subplots(figsize=(8, 5))
 
-ax6.barh(top_combined["county"], top_combined["prediction_gap"])
+ax6.barh(top_combined["county"], top_combined["prediction_gap"], color=colors)
 
-ax6.axvline(0)
+ax6.axvline(0, linestyle="--", color="black")
+
 ax6.set(
     xlabel="Prediction Gap (Observed − Predicted)",
     title="Counties with Largest Prediction Gaps",

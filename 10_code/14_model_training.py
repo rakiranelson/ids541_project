@@ -11,6 +11,17 @@ import os
 
 os.makedirs("30_results/figures", exist_ok=True)
 
+plt.rcParams.update(
+    {
+        "axes.spines.top": False,
+        "axes.spines.right": False,
+        "axes.edgecolor": "black",
+        "axes.linewidth": 1,
+        "xtick.color": "black",
+        "ytick.color": "black",
+    }
+)
+
 mental_health_df = pd.read_csv("20_intermediate_files/clean_mh_dataset.csv")
 
 rucc_dummies = pd.get_dummies(mental_health_df["rucc_category"], drop_first=True)
@@ -99,7 +110,11 @@ print(
 # plot to see how well our model predicted the high access counties
 fig3, ax3 = plt.subplots()
 
-ax3.scatter(high_access["observed_distress"], high_access["predicted_distress"])
+ax3.scatter(
+    high_access["observed_distress"],
+    high_access["predicted_distress"],
+    color="darkviolet",
+)
 
 min_val = min(
     high_access["observed_distress"].min(), high_access["predicted_distress"].min()
@@ -108,7 +123,7 @@ max_val = max(
     high_access["observed_distress"].max(), high_access["predicted_distress"].max()
 )
 
-ax3.plot([min_val, max_val], [min_val, max_val])
+ax3.plot([min_val, max_val], [min_val, max_val], color="gray", linestyle="--")
 
 ax3.set(
     xlabel="Actual Distress",
