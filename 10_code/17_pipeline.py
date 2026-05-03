@@ -1,5 +1,6 @@
 import subprocess
 import sys
+import os
 
 """
 Runs full IDS 541 pipeline:
@@ -10,6 +11,12 @@ Runs full IDS 541 pipeline:
 5. Analysis
 6. Memo generation
 """
+
+# create directories
+os.makedirs("20_intermediate_files", exist_ok=True)
+os.makedirs("30_results", exist_ok=True)
+os.makedirs("30_results/figures", exist_ok=True)
+os.makedirs("40_docs", exist_ok=True)
 
 scripts = [
     "10_code/11_make_df.py",
