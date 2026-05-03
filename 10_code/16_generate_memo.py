@@ -20,6 +20,15 @@ latex = f"""
 \\usepackage{{amsmath}}
 \\usepackage{{float}}
 \\usepackage{{subcaption}}
+\\usepackage{{caption}}
+
+\\captionsetup{{
+    font=small,
+    labelfont=bf,
+    textfont=it,
+    justification=justified,
+    singlelinecheck=false
+}}
 
 \\setstretch{{1.15}}
 \\setlength{{\\parindent}}{{0pt}}

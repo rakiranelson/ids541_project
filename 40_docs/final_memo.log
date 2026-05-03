@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 24.1) (preloaded format=pdflatex 2026.5.2)  3 MAY 2026 12:10
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 24.1) (preloaded format=pdflatex 2026.5.2)  3 MAY 2026 12:15
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -190,20 +190,20 @@ File: l3backend-pdftex.def 2024-01-04 L3 backend support: PDF output (pdfTeX)
 emo.aux)
 \openout1 = `final_memo.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 15.
-LaTeX Font Info:    ... okay on input line 15.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 15.
-LaTeX Font Info:    ... okay on input line 15.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 15.
-LaTeX Font Info:    ... okay on input line 15.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 15.
-LaTeX Font Info:    ... okay on input line 15.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 15.
-LaTeX Font Info:    ... okay on input line 15.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 15.
-LaTeX Font Info:    ... okay on input line 15.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 15.
-LaTeX Font Info:    ... okay on input line 15.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 24.
+LaTeX Font Info:    ... okay on input line 24.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 24.
+LaTeX Font Info:    ... okay on input line 24.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 24.
+LaTeX Font Info:    ... okay on input line 24.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 24.
+LaTeX Font Info:    ... okay on input line 24.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 24.
+LaTeX Font Info:    ... okay on input line 24.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 24.
+LaTeX Font Info:    ... okay on input line 24.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 24.
+LaTeX Font Info:    ... okay on input line 24.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
@@ -275,61 +275,61 @@ Package caption Info: End \AtBeginDocument code.
 File: 30_results/figures/fig1_provider_access_map.png Graphic file (type png)
 <use 30_results/figures/fig1_provider_access_map.png>
 Package pdftex.def Info: 30_results/figures/fig1_provider_access_map.png  used 
-on input line 52.
+on input line 61.
 (pdftex.def)             Requested size: 422.77664pt x 113.54794pt.
 
 [2] [3 <./30_results/figures/fig1_provider_access_map.png>]
-<30_results/figures/fig2_model_validation_high_access.png, id=17, 476.2593pt x 
+<30_results/figures/fig2_model_validation_high_access.png, id=18, 476.2593pt x 
 326.9013pt>
 File: 30_results/figures/fig2_model_validation_high_access.png Graphic file (ty
 pe png)
 <use 30_results/figures/fig2_model_validation_high_access.png>
 Package pdftex.def Info: 30_results/figures/fig2_model_validation_high_access.p
-ng  used on input line 72.
+ng  used on input line 81.
 (pdftex.def)             Requested size: 328.82707pt x 225.70679pt.
-<30_results/figures/fig3_prediction_gap_map.png, id=18, 357.4956pt x 228.1323pt
+<30_results/figures/fig3_prediction_gap_map.png, id=19, 357.4956pt x 228.1323pt
 >
 File: 30_results/figures/fig3_prediction_gap_map.png Graphic file (type png)
 <use 30_results/figures/fig3_prediction_gap_map.png>
 Package pdftex.def Info: 30_results/figures/fig3_prediction_gap_map.png  used o
-n input line 93.
+n input line 102.
 (pdftex.def)             Requested size: 267.7638pt x 170.88297pt.
-<30_results/figures/fig4_prediction_gap_scatter.png, id=19, 417.7206pt x 326.90
+<30_results/figures/fig4_prediction_gap_scatter.png, id=20, 417.7206pt x 326.90
 13pt>
 File: 30_results/figures/fig4_prediction_gap_scatter.png Graphic file (type png
 )
 <use 30_results/figures/fig4_prediction_gap_scatter.png>
 Package pdftex.def Info: 30_results/figures/fig4_prediction_gap_scatter.png  us
-ed on input line 99.
+ed on input line 108.
 (pdftex.def)             Requested size: 197.29623pt x 154.39684pt.
  [4 <./30_results/figures/fig2_model_validation_high_access.png>] [5 <./30_resu
 lts/figures/fig3_prediction_gap_map.png> <./30_results/figures/fig4_prediction_
 gap_scatter.png>]
-<30_results/figures/fig5_top_counties_gap.png, id=30, 528.2937pt x 337.9827pt>
+<30_results/figures/fig5_top_counties_gap.png, id=33, 528.2937pt x 337.9827pt>
 File: 30_results/figures/fig5_top_counties_gap.png Graphic file (type png)
 <use 30_results/figures/fig5_top_counties_gap.png>
 Package pdftex.def Info: 30_results/figures/fig5_top_counties_gap.png  used on 
-input line 120.
+input line 129.
 (pdftex.def)             Requested size: 375.80544pt x 240.42838pt.
 
-Overfull \hbox (11.31555pt too wide) in paragraph at lines 128--129
+Overfull \hbox (11.31555pt too wide) in paragraph at lines 137--138
 []\OT1/cmr/m/n/10.95 Overall, this anal-y-sis shows that dif-fer-ences be-tween
  ob-served and ex-pected dis-tress are not widespread
  []
 
 [6 <./30_results/figures/fig5_top_counties_gap.png>] [7]
-<30_results/figures/figA4_model_residuals.png, id=39, 426.8748pt x 326.9013pt>
+<30_results/figures/figA4_model_residuals.png, id=42, 426.8748pt x 326.9013pt>
 File: 30_results/figures/figA4_model_residuals.png Graphic file (type png)
 <use 30_results/figures/figA4_model_residuals.png>
 Package pdftex.def Info: 30_results/figures/figA4_model_residuals.png  used on 
-input line 141.
+input line 150.
 (pdftex.def)             Requested size: 352.31625pt x 269.8216pt.
-<30_results/figures/figA3_gap_by_rucc_scatter.png, id=40, 417.7206pt x 326.9013
+<30_results/figures/figA3_gap_by_rucc_scatter.png, id=43, 417.7206pt x 326.9013
 pt>
 File: 30_results/figures/figA3_gap_by_rucc_scatter.png Graphic file (type png)
 <use 30_results/figures/figA3_gap_by_rucc_scatter.png>
 Package pdftex.def Info: 30_results/figures/figA3_gap_by_rucc_scatter.png  used
- on input line 151.
+ on input line 160.
 (pdftex.def)             Requested size: 352.31625pt x 275.71255pt.
  [8
 
@@ -343,22 +343,25 @@ L3 programming layer <2024-01-04>
  ***********
  ) 
 Here is how much of TeX's memory you used:
- 4209 strings out of 474486
- 73551 string characters out of 5743756
+ 4218 strings out of 474486
+ 73642 string characters out of 5743756
  1931542 words of memory out of 5000000
- 26482 multiletter control sequences out of 15000+600000
- 563000 words of font info for 53 fonts, out of 8000000 for 9000
+ 26487 multiletter control sequences out of 15000+600000
+ 564606 words of font info for 58 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 67i,8n,77p,821b,492s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 67i,8n,77p,821b,496s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <C:/Users/rakir/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/
 cmbx10.pfb><C:/Users/rakir/AppData/Local/Programs/MiKTeX/fonts/type1/public/ams
 fonts/cm/cmbx12.pfb><C:/Users/rakir/AppData/Local/Programs/MiKTeX/fonts/type1/p
-ublic/amsfonts/cm/cmr10.pfb><C:/Users/rakir/AppData/Local/Programs/MiKTeX/fonts
-/type1/public/amsfonts/cm/cmsy10.pfb>
+ublic/amsfonts/cm/cmbx9.pfb><C:/Users/rakir/AppData/Local/Programs/MiKTeX/fonts
+/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/rakir/AppData/Local/Programs/MiKT
+eX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/rakir/AppData/Local/Prog
+rams/MiKTeX/fonts/type1/public/amsfonts/cm/cmti10.pfb><C:/Users/rakir/AppData/L
+ocal/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmti9.pfb>
 Output written on "C:\Users\rakir\computer science\Courses\IDS 541\ids541_proje
-ct\40_docs\final_memo.pdf" (9 pages, 980488 bytes).
+ct\40_docs\final_memo.pdf" (9 pages, 1020332 bytes).
 PDF statistics:
- 67 PDF objects out of 1000 (max. 8388607)
+ 82 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  36 words of extra memory for PDF output out of 10000 (max. 10000000)
 
