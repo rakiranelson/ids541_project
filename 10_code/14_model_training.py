@@ -7,6 +7,10 @@ from sklearn.metrics import r2_score, mean_squared_error
 
 pd.set_option("mode.copy_on_write", True)
 
+import os
+
+os.makedirs("30_results/figures", exist_ok=True)
+
 mental_health_df = pd.read_csv("20_intermediate_files/clean_mh_dataset.csv")
 
 rucc_dummies = pd.get_dummies(mental_health_df["rucc_category"], drop_first=True)
@@ -63,13 +67,21 @@ fig1, ax1 = plt.subplots()
 ax1.scatter(y_pred, residuals)
 ax1.axhline(0)
 ax1.set(xlabel="Predicted", ylabel="Residuals", title="Residual Plot")
-plt.show()
+
+fig1.savefig(
+    "30_results/figures/figA4_model_residuals.png", dpi=300, bbox_inches="tight"
+)
+plt.close(fig1)
 
 fig2, ax2 = plt.subplots()
 ax2.scatter(y_test, y_pred)
 ax2.plot([y_test.min(), y_test.max()], [y_test.min(), y_test.max()])
 ax2.set(xlabel="Actual", ylabel="Predicted", title="Actual vs Predicted")
-plt.show()
+
+fig2.savefig(
+    "30_results/figures/figA5_model_test_fit.png", dpi=300, bbox_inches="tight"
+)
+plt.close(fig2)
 
 
 # now try with all high access data to get the best possible estimates before applying it to low-access counties
@@ -104,8 +116,12 @@ ax3.set(
     title="Actual vs Predicted (using all data)",
 )
 
-plt.tight_layout()
-plt.show()
+fig3.savefig(
+    "30_results/figures/fig2_model_validation_high_access.png",
+    dpi=300,
+    bbox_inches="tight",
+)
+plt.close(fig3)
 
 import joblib
 

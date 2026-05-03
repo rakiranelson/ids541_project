@@ -3,6 +3,10 @@ import numpy as np
 import matplotlib.pyplot as plt
 
 pd.set_option("mode.copy_on_write", True)
+import os
+
+os.makedirs("30_results/figures", exist_ok=True)
+
 import joblib
 
 model = joblib.load("20_intermediate_files/distress_model.pkl")
@@ -32,8 +36,12 @@ ax1.set(
     title="Observed vs Predicted (Low-Access Counties)",
 )
 
-plt.tight_layout()
-plt.show()
+fig1.savefig(
+    "30_results/figures/figA1_low_access_actual_vs_predicted.png",
+    dpi=300,
+    bbox_inches="tight",
+)
+plt.close(fig1)
 
 ##
 low_access["prediction_gap"] = (
@@ -51,8 +59,10 @@ ax2.set(
     title="Prediction Gap vs Expected Distress)",
 )
 
-plt.tight_layout()
-plt.show()
+fig2.savefig(
+    "30_results/figures/fig4_prediction_gap_scatter.png", dpi=300, bbox_inches="tight"
+)
+plt.close(fig2)
 
 ## figure 3
 fig3, ax3 = plt.subplots()
@@ -65,8 +75,12 @@ ax3.set(
     title="Distribution of Prediction Gap",
 )
 
-plt.tight_layout()
-plt.show()
+fig3.savefig(
+    "30_results/figures/figA2_prediction_gap_distribution.png",
+    dpi=300,
+    bbox_inches="tight",
+)
+plt.close(fig3)
 
 ## figure
 fig4, ax4 = plt.subplots()
@@ -93,8 +107,12 @@ handles = [
 
 ax4.legend(handles=handles, title="RUCC")
 
-plt.tight_layout()
-plt.show()
+fig4.savefig(
+    "30_results/figures/figA3_gap_by_rucc_scatter.png",
+    dpi=300,
+    bbox_inches="tight",
+)
+plt.close(fig4)
 
 # merge prediction gap data to geo dataframe
 import geopandas as gpd
@@ -111,8 +129,12 @@ low_access_gdf.plot(column="prediction_gap", cmap="coolwarm_r", legend=True, ax=
 
 ax5.set_title("Prediction Gap by County (Red = Lower Than Expected")
 
-plt.tight_layout()
-plt.show()
+fig5.savefig(
+    "30_results/figures/fig3_prediction_gap_map.png",
+    dpi=300,
+    bbox_inches="tight",
+)
+plt.close(fig5)
 
 ## get top 5 negative
 results = {}
@@ -154,8 +176,12 @@ ax6.set(
     title="Counties with Largest Prediction Gaps",
 )
 
-plt.tight_layout()
-plt.show()
+fig6.savefig(
+    "30_results/figures/fig5_top_counties_gap.png",
+    dpi=300,
+    bbox_inches="tight",
+)
+plt.close(fig6)
 
 results["gap_mean"] = low_access["prediction_gap"].mean()
 results["gap_by_rucc"] = (

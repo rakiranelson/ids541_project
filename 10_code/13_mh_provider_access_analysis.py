@@ -6,6 +6,10 @@ import pygris
 
 pd.set_option("mode.copy_on_write", True)
 
+import os
+
+os.makedirs("30_results/figures", exist_ok=True)
+
 import warnings
 
 warnings.filterwarnings("ignore")
@@ -35,8 +39,12 @@ ax11.set_title("High Access")
 low_access["observed_distress"].hist(ax=ax12)
 ax12.set_title("Low Access")
 
-plt.tight_layout()
-plt.show()
+fig1.savefig(
+    "30_results/figures/figA7_distress_distribution_high_vs_low.png",
+    dpi=300,
+    bbox_inches="tight",
+)
+plt.close(fig1)
 
 
 """
@@ -52,8 +60,12 @@ ax21.set_title("Mental Health Care Providers per 100k people in NC Counties")
 mental_health_gdf.plot(column="observed_distress", legend=True, ax=ax22)
 ax21.set_title("Frequent Mental Health Distress in NC Counties")
 
-plt.tight_layout()
-plt.show()
+fig2.savefig(
+    "30_results/figures/fig1_provider_access_map.png",
+    dpi=300,
+    bbox_inches="tight",
+)
+plt.close(fig2)
 
 # create column for high access
 mental_health_gdf["high_access"] = mental_health_gdf["providers_per_100k"] >= threshold
@@ -66,17 +78,25 @@ fig3, ax31 = plt.subplots()
 mental_health_gdf.plot(column="low_access", legend=True, ax=ax31)
 ax31.set_title("Low Mental Health Provider Access Counties in NC")
 
-plt.tight_layout()
-plt.show()
+fig3.savefig(
+    "30_results/figures/figA8_low_access_binary_map.png",
+    dpi=300,
+    bbox_inches="tight",
+)
+plt.close(fig3)
+
 
 # figure 4: rucc categories for low access counties
 fig4, ax41 = plt.subplots()
 low_access.plot(column="rucc_category", legend=True, ax=ax41)
 ax41.set_title("RUCC Categories for Low Mental Health Provider Access Counties in NC")
 
-plt.tight_layout()
-plt.show()
-
+fig4.savefig(
+    "30_results/figures/figA6_rucc_map.png",
+    dpi=300,
+    bbox_inches="tight",
+)
+plt.close(fig4)
 # export high and low access data
 low_access.reset_index(drop=True).to_file(
     "20_intermediate_files/high_access_gdf.geojson", driver="GeoJSON"
